@@ -8,7 +8,7 @@
 
 ## output:
 
-## 
+```javascript
 
 10.0.3.4 | SUCCESS => {
     "ansible_facts": {
@@ -18,5 +18,5 @@
     "ping": "pong"
 } 
 
-##
+```
 
