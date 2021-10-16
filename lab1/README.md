@@ -24,7 +24,7 @@
 ## command 2:
 
 ``` bash
-ansible -i hosts all -m copy -a "dest=/home/admin/toto.txt content='bonjour eazytraining'" 
+[admin@node1 ~]$ ansible -i hosts all -m copy -a "dest=/home/admin/toto.txt content='bonjour eazytraining'" 
 ```
 
 ## output 2:
