@@ -9,6 +9,7 @@
 ## output:
 
 ## 
+
 10.0.3.4 | SUCCESS => {
     "ansible_facts": {
         "discovered_interpreter_python": "/usr/bin/python"
@@ -16,5 +17,6 @@
     "changed": false, 
     "ping": "pong"
 } 
+
 ##
 
