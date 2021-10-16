@@ -1,6 +1,6 @@
 # ansible-lab1
 
-## command 1:
+## command 1: ping
 
 ``` bash
 [admin@node1 ~]$ ansible -i hosts all -m ping 
@@ -21,7 +21,7 @@
 ```
 
 
-## command 2:
+## command 2: create file
 
 ``` bash
 [admin@node1 ~]$ ansible -i hosts all -m copy -a "dest=/home/admin/toto.txt content='bonjour eazytraining'" 
@@ -48,13 +48,14 @@
 }
 ```
 
-## update hosts with the following line in hosts: 
+## update hosts file: 
 
 ``` bash
+10.0.2.4 ansible_user=admin ansible_password=admin ansible_ssh_common_args='-o SS trictHostKeyChecking=no' 
 10.0.2.5 ansible_user=admin ansible_password=admin ansible_ssh_common_args='-o SS trictHostKeyChecking=no' 
 ```
 
-## re-execute again the command with copy module:  
+## create file again:  
 
 ``` bash
 [admin@node1 ~]$ ansible -i hosts all -m copy -a "dest=/home/admin/toto.txt content='bonjour eazytraining'" 
@@ -98,14 +99,11 @@
     "uid": 1000
 }
 ```
-## get the setup with the following command:
+## setup command:
 
 ``` bash
 ansible -i hosts all -m setup 
 ```
-
-## setup results: 
-
 
 
 ```javascript
