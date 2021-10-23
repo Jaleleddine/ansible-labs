@@ -85,4 +85,45 @@ PLAY RECAP *********************************************************************
 client                     : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0 
 ```
 
+## deploy.yml content when we use ansible.cfg
+
+
+```javascript
+---
+- name: httpd install play
+  hosts: prod
+  become: true
+  pre_tasks:
+    - name: download python pip script
+      get_url:
+        url: https://bootstrap.pypa.io/pip/2.7/get-pip.py
+        dest: /tmp/get-pip.py
+    - name: install python-pip
+      command: python2.7 /tmp/get-pip.py
+      changed_when: false
+    - name: install docker python
+      pip: name=docker-py
+  tasks:
+   - name: create httpd container
+     docker_container:
+        name: webapp
+        image: httpd
+        ports:
+         - "80:80"
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
