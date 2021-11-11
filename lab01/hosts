@@ -1,0 +1,2 @@
+10.0.3.4 ansible_user=admin ansible_password=admin
+ansible_ssh_common_args='-o StrictHostKeyChecking=no'
